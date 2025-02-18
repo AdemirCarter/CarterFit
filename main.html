@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarterFit</title>
+</head>
+<body>
+    <input placeholder="Nome" type="text" id="login">
+    <input placeholder="Senha" type="password" id="senha">
+
+    <button onclick=login()>Entrar</button>
+
+    <script>
+        function login() {
+            const name = document.getElementById("login")
+            const senha = document.getElementById("senha")
+
+            fetch("data.json")
+            .then(res => res.json())
+            .then(data => {
+
+                if (data[name.value]) {
+                    if (senha.value === data[name.value].Senha) {
+                        localStorage.setItem("nome", name.value)
+                        window.location.href = "principal.html"
+                    }
+                    
+                }
+            })
+
+            
+
+        }
+    </script>
+</body>
+</html>

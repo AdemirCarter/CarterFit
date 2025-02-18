@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarterFit</title>
+    <link rel="stylesheet" href="principal.css">
+</head>
+<body>
+    <p id="logo">CarterFit</p>
+
+    <div id="Usuario">
+        <img id="avatar" src= "" alt="">
+        <p id="namebar">Usuario</p>
+
+    </div>
+
+    <div id="navbar">
+        <button onclick=treinobar()>Treino</button>
+        <button onclick=sobrebar()>Sobre</button>
+        <button onclick=contatobar()>Contato</button>
+
+    </div>
+
+    <div id="treino" style="display: none;">
+        <button onclick=treino_a()>Treino A</button>
+        <button onclick=treino_b()>Treino B</button>
+        <button onclick=treino_c()>Treino C</button>
+        <button onclick=treino_d()>Treino D</button>
+        <button onclick=treino_e()>Treino E</button>
+
+        <div id="ficha" style="height: 350px;">
+            <div id="treino-a" style="display: none;">
+                <p id="diaA">Dia:</p>
+            </div>
+            <div id="treino-b" style="display: none;">
+                <p id="diaB">Dia:</p>
+            </div>
+            <div id="treino-c" style="display: none;">
+                <p id="diaC">Dia:</p>
+            </div>
+            <div id="treino-d" style="display: none;">
+                <p id="diaD">Dia:</p>
+            </div>
+            <div id="treino-e" style="display: none;">
+                <p id="diaE">Dia:</p>
+            </div>
+
+        </div>
+
+        <button id="save" onclick=save()>Salvar</button>
+
+    </div>
+
+    <div id="sobre" style="display: none;">
+        Este site tem o próposito de organizar seus treinos na semana da forma que o personal escolher. <br><br>
+        O valor cobrado pela ficha e o uso do site é de R$ 25,00 a cada 2 MESES (tempo de mudança dos treinos). <br><br>
+        Como funciona?: Entre em contato com o personal do site. Após isso, ele irá fazer perguntas do tipo: <br><br>
+        qual músculo é sua prioridade no momento? <br> Quantas vezes você quer entrar pela semana? <br> Seu tempo de treino? E etc. Assim seu treino <br><br>
+        será montado pelo personal com vários métodos de como você fará eles.
+    </div>
+
+    <div id="contato" style="display: none;">
+        Fico feliz que queira entrar em contato conosco! <br><br>
+        Aviso: Leia SOBRE nós antes de entrar em contato <br><br>
+
+        <a href="https://discord.com/channels/@me/723494046793859113">DISCORD</a>
+    </div>
+
+    <script>
+        const divtreino = document.getElementById("treino")
+        const divsobre = document.getElementById("sobre")
+        const divcontato = document.getElementById("contato")
+        const user = localStorage.getItem("nome")
+
+        const namebar = document.getElementById("namebar")
+        namebar.textContent = user
+
+        const ficha = document.getElementById("ficha")
+
+        const fichas = {
+            "a": document.getElementById("treino-a"),
+            "b": document.getElementById("treino-b"),
+            "c": document.getElementById("treino-c"),
+            "d": document.getElementById("treino-d"),
+            "e": document.getElementById("treino-e")
+        }
+
+        function av() {
+            const avatar = document.getElementById("avatar")
+
+            fetch("data.json")
+            .then(res => res.json())
+            .then(data => {
+                avatar.src = data[user].Foto
+            })
+        }
+
+        av()
+
+        function dias() {
+            const diaA = document.getElementById("diaA")
+            const diaB = document.getElementById("diaB")
+            const diaC = document.getElementById("diaC")
+            const diaD = document.getElementById("diaD")
+            const diaE = document.getElementById("diaE")
+
+            fetch("data.json")
+            .then(res => res.json())
+            .then(data => {
+                diaA.textContent = `Dia: ${data[user].Dias[0]}`
+                diaB.textContent = `Dia: ${data[user].Dias[1]}`
+                diaC.textContent = `Dia: ${data[user].Dias[2]}`
+                diaD.textContent = `Dia: ${data[user].Dias[3]}`
+                diaE.textContent = `Dia: ${data[user].Dias[4]}`
+            })
+        }
+
+        dias()
+
+        function treinobar() {
+            divtreino.style.display = "block"
+            divsobre.style.display = "none"
+            divcontato.style.display = "none"
+
+        }
+
+        function sobrebar() {
+            divtreino.style.display = "none"
+            divsobre.style.display = "block"
+            divcontato.style.display = "none"
+
+        }
+
+        function contatobar(){
+            divtreino.style.display = "none"
+            divsobre.style.display = "none"
+            divcontato.style.display = "block"
+
+        }
+
+        function save() {
+            const repinput = document.querySelectorAll("input[class = 'rep']")
+            const pesoinput = document.querySelectorAll("input[class = 'peso']")
+
+            repinput.forEach(rep => {
+                localStorage.setItem(rep.id, rep.value)
+            });
+
+            pesoinput.forEach(peso => {
+                localStorage.setItem(peso.id, peso.value)
+            })
+
+            alert("Salvo com sucesso")
+
+            location.reload()
+        }
+    </script>
+
+    <script src="treino-a.js"></script>
+    <script src="treino-b.js"></script>
+    <script src="treino-c.js"></script>
+    <script src="treino-d.js"></script>
+    <script src="treino-e.js"></script>
+</body>
+</html>
