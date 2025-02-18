@@ -20,13 +20,11 @@
     }
 
     #navbar button{
-        padding: 10px 15px;
+        padding: 10px 10px;
         border: none;
     }
 
     #Usuario {
-        position: relative;
-        left: 10px;
         display: flex;
         margin-bottom: 20px;
     }
@@ -35,14 +33,16 @@
         position: relative;
         top: 10px;
         font-size: 20px;
-        
+        left: 10px;
     }
 
     #Usuario #avatar{
+        position: relative;
         border-radius: 100%;
         width: 45px;
         height: 45px;
         margin-right: 20px;
+        left: 10px;
     }
 
     #treino button{
