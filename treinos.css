@@ -23,13 +23,11 @@
         border: none;
         border-radius: 20px;
         font-size: 20px;
-        border-bottom: 4px solid blueviolet;
-        border-left: 2px solid blueviolet;
-        border-right: 2px solid blueviolet;
-        transition: .3s;
+        background-color: rgb(209, 209, 209);
+        transition: .1s;
     }
 
-    #treinos button:hover {
-        background-color: gray;
+    #treinos button:active {
+        background-color: blueviolet;
     }
 }

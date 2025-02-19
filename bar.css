@@ -32,8 +32,4 @@
         transition: .3s;
     }
 
-    #menu button:hover {
-        background-color: blueviolet;
-        color: white;
-    }
 }

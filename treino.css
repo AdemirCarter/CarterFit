@@ -13,7 +13,7 @@
 
     .ficha {
         width: 250px;
-        height: 350px;
+        height: 380px;
         position: relative;
         left: 20%;
         font-size: 20px;
@@ -22,11 +22,12 @@
     }
 
     .ficha p {
-        background-color: blueviolet;
-        color: white;
+        background-color: rgb(209, 209, 209);
+        color: blueviolet;
         height: 80px;
         padding: 10px;
         border-radius: 20px;
+        border: 1px solid blueviolet;
     }
 
 
@@ -72,7 +73,6 @@
         border-radius: 30px;
         color: rgb(0, 0, 0);
         text-transform: uppercase;
-        border: 2px solid blueviolet;
     }
     /*Save*/
 
@@ -84,11 +84,10 @@
         background-color: rgb(231, 231, 231);
         position: relative;
         left: 36%;
-        top: 30px;
-        transition: .3s;
+        top: 10px;
     }
 
-    #save:hover {
+    #save:active {
         background-color: blueviolet;
         color: white;
     }
