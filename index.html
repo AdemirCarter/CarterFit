@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarterFit</title>
+    <title>CarterACM</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
    
 
     <div id="login">
-        <h1 id="logo">CarterFit</h1>
+        <h1 id="logo">CarterACM</h1>
         <h3>Conecte-se</h3>
-        <p>Seja bem-vindo a CarterFit! Insira seu nome e sua senha dada pelo personal para acessar sua ficha!</p>
+        <p>Seja bem-vindo a CarterACM! Insira seu nome e sua senha dada pelo personal para acessar sua ficha!</p>
 
         <input placeholder="Nome" type="text" id="name">
         <input placeholder="Senha" type="password" id="senha"> <br>
@@ -32,7 +32,7 @@
                 if (data[name.value]) {
                     if (senha.value === data[name.value].Senha) {
                         localStorage.setItem("nome", name.value)
-                        window.location.href = "principal.html"
+                        window.location.href = "main.html"
                     }
                     
                 }

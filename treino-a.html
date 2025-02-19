@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarterACM</title>
+    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="treino.css">
+</head>
+<body>
+    <h2>Treino A</h2>
+    <p class="dia_class" id="dia_A"></p>
+    <div class="ficha" id="treino-a"></div>
+    <button id="save" onclick=save()>Salvar</button>
+    
+    <div id="menu">
+        <button id="inicio" onclick=iniciobar()>INICIO</button>
+        <button id="treino" onclick=treinobar()>MEUS TREINOS</button>
+        <button id="contato" onclick=contatobar()>CONTATO</button>
+
+    </div>
+
+    <script>
+        //Variaveis
+        const user = localStorage.getItem("nome")
+        const treinoA = document.getElementById("treino-a")
+
+        //Dias
+
+        function dias() {
+            const dia_A = document.getElementById("dia_A")
+
+            fetch("data.json")
+            .then(res => res.json())
+            .then(data => {
+                dia_A.textContent = `${data[user].Dias[0]}`
+            })
+        }
+
+        dias()
+
+        //Treino A
+        fetch("data.json")
+        .then(res => res.json())
+        .then(data => {
+            data[user].treinoA.forEach((exercicio, index) => {
+                const novo_exercicio = document.createElement("p")
+                novo_exercicio.textContent = exercicio
+                treinoA.appendChild(novo_exercicio)
+
+                const repinput = document.createElement("input")
+                repinput.id = `repa${index}`
+                repinput.className = "rep"
+                repinput.placeholder = "repetição"
+                repinput.type = "number"
+                treinoA.appendChild(repinput)
+
+                const pesoinput = document.createElement("input")
+                pesoinput.className = "peso"
+                pesoinput.id = `pesoa${index}`
+                pesoinput.placeholder = "peso kg"
+                pesoinput.type = "number"
+                treinoA.appendChild(pesoinput)
+
+                repinput.value = localStorage.getItem(repinput.id)
+                pesoinput.value = localStorage.getItem(pesoinput.id)
+            })
+        })
+
+        //Treino
+
+        function treinobar() {
+            window.location.href = "treinos.html" 
+        }
+
+        //Inicio
+
+        function iniciobar() {
+            window.location.href = "main.html" 
+        }
+
+        //Contato
+
+        function contatobar(){
+            window.location.href = "contato.html" 
+        }
+
+        //Save
+        function save() {
+            const repinput = document.querySelectorAll("input[class = 'rep']")
+            const pesoinput = document.querySelectorAll("input[class = 'peso']")
+
+            repinput.forEach(rep => {
+                localStorage.setItem(rep.id, rep.value)
+            });
+
+            pesoinput.forEach(peso => {
+                localStorage.setItem(peso.id, peso.value)
+            })
+
+            alert("Salvo com sucesso")
+
+            location.reload()
+        }
+    </script>
+
+</body>
+</html>

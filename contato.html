@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarterACM</title>
+    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="contato.css">
+</head>
+<body>
+    <h1>Contato</h1>
+    <div id="info">
+        <p>Fico feliz que queira entrar em contato conosco! <br><br>
+            <strong>AVISO:</strong> Leia <strong>SOBRE</strong> nós antes de entrar em contato <br><br></p>
+    
+        <a id="discord" href="https://discord.com/channels/@me/723494046793859113">DISCORD</a> <br><br>
+    
+        <p>Agradeçemos pela compreensão</p>
+    </div>
+
+    <div id="menu">
+        <button id="inicio" onclick=iniciobar()>INICIO</button>
+        <button id="treino" onclick=treinobar()>MEUS TREINOS</button>
+        <button id="contato" style="background-color: blueviolet; color: white;" onclick=contatobar()>CONTATO</button>
+
+    </div>
+    
+    <script>
+        //Treino
+
+        function treinobar() {
+            window.location.href = "treinos.html" 
+        }
+
+        //Inicio
+
+        function iniciobar() {
+            window.location.href = "main.html" 
+        }
+
+        //Contato
+
+        function contatobar(){
+            window.location.href = "contato.html" 
+        }
+
+    </script>
+</body>
+</html>

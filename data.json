@@ -1,7 +1,7 @@
 {
     "Ademir": {
         "Foto": "https://i.pinimg.com/736x/c8/61/57/c861570f893beec6d48618dfddd7b8a6.jpg",
-        "Dias": ["Segunda", "Terça", "Quarta", "Sexta", "Folga"],
+        "Dias": ["Segunda: Costas, Ombro Biceps ", "Terça: Peito, Ombro e Triceps", "Quarta: Quadriceps e Posterior", "Sexta: Peito, Perna, Braço", "Folga"],
         "Senha": "euamoavana2",
         "treinoA": ["Pulldown", "Remada Serrote", "Puxada Fechada", "Remada Alta", "Posterior de Ombro", "Rosca W", "Rosca Martelo"],
         "treinoB": ["Supino Inclinado", "Crucifixo", "Supino Reto", "Polia Alta", "Elevação Lateral", "Triceps Frances", "Triceps Barra"],
@@ -12,7 +12,7 @@
 
     "Kay": {
         "Foto": "https://media.discordapp.net/attachments/1277719805818048584/1341531219401248788/33072fe6903f6b66f418eaf2bf0a7c4e.jpg?ex=67b655cf&is=67b5044f&hm=c98f78d182c0ff51d5da9c8b85d4a741ea30a74740c6ca9ad8522b4864abd85e&=&format=webp&width=445&height=445",
-        "Dias": ["Segunda", "Terça", "Quarta", "Sexta", "Folga"],
+        "Dias": ["Segunda: Costas e Triceps", "Terça: Quadriceps e Posterior", "Quarta: Peito e Biceps", "Sexta: peito e Braço", "Folga"],
         "Senha": "Kay1812",
         "treinoA": ["Remada Alta", "Remada Serrote", "Pulldown", "Puxada Fechada", "Posterior de Ombro", "Triceps Corda", "Triceps Frances"],
         "treinoB": ["Cadeira adutora", "Extensora", "Leg Press", "Cadeira Flexora", "Stiff"],

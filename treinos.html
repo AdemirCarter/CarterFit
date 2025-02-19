@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarterACM</title>
+    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="treinos.css">
+</head>
+<body>
+    <h1>Treinos</h1>
+
+    <div id="treinos">
+        <button onclick=treino_a()>Treino A</button> <br>
+        <button onclick=treino_b()>Treino B</button> <br>
+        <button onclick=treino_c()>Treino C</button> <br>
+        <button onclick=treino_d()>Treino D</button> <br>
+        <button onclick=treino_e()>Treino E</button>
+    </div>
+
+    <div id="menu">
+        <button id="inicio" onclick=iniciobar()>INICIO</button>
+        <button id="treino" style="background-color: blueviolet; color: white;" onclick=treinobar()>MEUS TREINOS</button>
+        <button id="contato" onclick=contatobar()>CONTATO</button>
+
+    </div>
+
+    <script>
+        function treino_a() {
+            window.location.href = "treino-a.html"
+        }
+
+        function treino_b() {
+            window.location.href = "treino-b.html"
+        }
+
+        function treino_c() {
+            window.location.href = "treino-c.html"
+        }
+
+        function treino_d() {
+            window.location.href = "treino-d.html"
+        }
+
+        function treino_e() {
+            window.location.href = "treino-e.html"
+        }
+
+        //Treino
+
+        function treinobar() {
+            window.location.href = "treinos.html" 
+        }
+
+        //Inicio
+
+        function iniciobar() {
+            window.location.href = "main.html" 
+        }
+
+        //Contato
+
+        function contatobar(){
+            window.location.href = "contato.html" 
+        }
+
+    </script>
+</body>
+</html>
