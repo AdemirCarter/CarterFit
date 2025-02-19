@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="principal.css">
 </head>
 <body>
-    <p id="logo">CarterFit</p>
+    <div id="logo">
+        <p>CarterFit</p>
+    </div>
 
     <div id="Usuario">
         <img id="avatar" src= "" alt="">
@@ -23,11 +25,11 @@
     </div>
 
     <div id="treino" style="display: none;">
-        <button id="treinoa" onclick=treino_a()>Treino A</button>
-        <button id="treinob" onclick=treino_b()>Treino B</button>
-        <button id="treinoc" onclick=treino_c()>Treino C</button>
-        <button id="treinod" onclick=treino_d()>Treino D</button>
-        <button id="treinoe"onclick=treino_e()>Treino E</button>
+        <button id="treinoa" onclick=treino_a()>Treino <br> A</button>
+        <button id="treinob" onclick=treino_b()>Treino <br> B</button>
+        <button id="treinoc" onclick=treino_c()>Treino <br> C</button>
+        <button id="treinod" onclick=treino_d()>Treino <br> D</button>
+        <button id="treinoe"onclick=treino_e()>Treino <br> E</button>
 
         <div id="ficha" style="height: 1px;">
             <div id="treino-a" style="display: none;">
@@ -145,7 +147,7 @@
 
             clearInterval(intervalo)
             intervalo = setTimeout(function() {
-                ficha.style.left = "30px"
+                ficha.style.left = "35px"
                 usou = true
 
                 if (usou = true) {

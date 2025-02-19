@@ -33,11 +33,11 @@ function treino_b() {
 
     fichas.b.style.display = "block"
 
-    treinoa.style.backgroundColor = "rgb(29, 29, 29)"
+    treinoa.style.backgroundColor = "rgb(0,0,0,0.4)"
     treinob.style.backgroundColor = "black"
-    treinoc.style.backgroundColor = "rgb(29, 29, 29)"
-    treinod.style.backgroundColor = "rgb(29, 29, 29)"
-    treinoe.style.backgroundColor = "rgb(29, 29, 29)"
+    treinoc.style.backgroundColor = "rgb(0,0,0,0.4)"
+    treinod.style.backgroundColor = "rgb(0,0,0,0.4)"
+    treinoe.style.backgroundColor = "rgb(0,0,0,0.4)"
 
     ficha.style.height = "1px"
 

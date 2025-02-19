@@ -7,52 +7,63 @@
 @media screen and (max-width: 600px){
 
     body {
-        background-color: rgb(53, 53, 53);
+        background-color: rgb(45, 49, 59);
     }
 
     #logo {
         font-size: 30px;
         text-align: center;
-        background-color: rgb(29, 29, 29);
+        background-color: rgba(0, 0, 0, 0.4);
         color: white;
-        padding: 5px 0px;
+        padding: 8px 0px;
+    }
+
+    #logo p{
+        background-color: rgba(0, 0, 0, 0.6);
+        width: 250px;
+        border-radius: 30px;
+        position: relative;
+        left: 70px;
     }
 
     #navbar {
         display: flex;
         justify-content: space-around;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(0, 0, 0, 0.4);
+        top: 5px;
         position: relative;
-        bottom: 10px;
-        padding: 20px 10px;
+        padding: 10px 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
     }
 
     #navbar button{
         color: white;
         padding: 10px 20px;
-        border: 1px solid white;
+        font-size: 17px;
         border-radius: 15px;
         transition: .5s;
-        background-color: transparent;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.4);
     }
 
     #Usuario {
         color: white;
         position: relative;
-        bottom: 5px;
         display: flex;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(0, 0, 0, 0.4);
         padding: 10px 10px;
     }
 
     #Usuario #namebar{
         position: relative;
         top: 10px;
-        font-size: 25px;
         left: 10px;
+        font-size: 20px;
     }
 
     #Usuario #avatar{
+        border: 2px solid white;
         position: relative;
         border-radius: 100%;
         width: 45px;
@@ -64,13 +75,14 @@
     #treino button{
         color: white;
         margin-right: 8px;
-        padding: 7px 7px;
+        padding: 7px 13px;
         position: relative;
         left: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         border: none;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(0,0,0,0.4);
         border-radius: 10px;
+        transition: .5s;
     }
 
     #treino {
@@ -79,11 +91,12 @@
 
     #treino #save {
         position: relative;
-        margin-top: 20px;
-        left: 150px;
-        padding: 15px 30px;
+        margin-top: 15px;
+        left: 140px;
+        padding: 8px 30px;
         border-radius: 15px;
         transition: .5s;
+        font-size: 18px;
     }
 
     #save:hover {
@@ -92,12 +105,11 @@
 
     #ficha {
         color: white;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(0, 0, 0, 0.4);
         padding: 10px 10px;
         width: 300px;
         overflow-y: auto;
         position: relative;
-        left: 40px;
         transition: .5s;
         border-radius: 15px;
     }
@@ -118,7 +130,7 @@
         font-size: 15px;
         padding: 0px 10px;
         background-color: transparent;
-        border: 1px solid white;
+        border: 1px solid black;
         border-radius: 10px;
         color: white;
     }
@@ -129,7 +141,7 @@
         width: 300px;
         height: 400px;
         left: 30px;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(0, 0, 0, 0.4);
         padding: 15px;
         transition: .5s;
         border-radius: 15px;
@@ -141,7 +153,7 @@
         height: 150px;
         position: relative;
         left: 30px;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(0, 0, 0, 0.4);
         padding: 15px;
         border-radius: 15px;
         transition: .5s;
@@ -150,7 +162,7 @@
     #diaA, #diaB, #diaC, #diaD, #diaE {
         position: relative;
         padding: 15px 10px;
-        background-color: rgba(0, 0, 0, 0.466);
+        background-color: rgba(0, 0, 0, 0.5);
         width: 250px;
         border-radius: 20px;
     }

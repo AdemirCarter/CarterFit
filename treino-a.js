@@ -36,10 +36,10 @@ function treino_a() {
     ficha.style.height = "1px"
 
     treinoa.style.backgroundColor = "black"
-    treinob.style.backgroundColor = "rgb(29, 29, 29)"
-    treinoc.style.backgroundColor = "rgb(29, 29, 29)"
-    treinod.style.backgroundColor = "rgb(29, 29, 29)"
-    treinoe.style.backgroundColor = "rgb(29, 29, 29)"
+    treinob.style.backgroundColor = "rgb(0,0,0,0.4)"
+    treinoc.style.backgroundColor = "rgb(0,0,0,0.4)"
+    treinod.style.backgroundColor = "rgb(0,0,0,0.4)"
+    treinoe.style.backgroundColor = "rgb(0,0,0,0.4)"
 
     clearInterval(intervalo)
     intervalo = setTimeout(function() {
