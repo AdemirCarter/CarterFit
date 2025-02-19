@@ -98,9 +98,11 @@
                 localStorage.setItem(peso.id, peso.value)
             })
 
-            alert("Salvo com sucesso")
+            setInterval(function(){
+                alert("Salvo com sucesso")
 
-            location.reload()
+                location.reload()
+            }, 500)
         }
     </script>
 

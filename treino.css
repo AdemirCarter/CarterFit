@@ -85,11 +85,13 @@
         position: relative;
         left: 36%;
         top: 10px;
+        transition: .2s;
     }
 
-    #save:active {
+    #save:hover {
         background-color: blueviolet;
         color: white;
+        transform: scale(1.2);
     }
 
 }
