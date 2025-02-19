@@ -4,7 +4,7 @@
         "Dias": ["Segunda", "Terça", "Quarta", "Sexta", "Folga"],
         "Senha": "euamoavana2",
         "treinoA": ["Pulldown", "Remada Serrote", "Puxada Fechada", "Remada Alta", "Posterior de Ombro", "Rosca W", "Rosca Martelo"],
-        "treinoB": ["Supino Reto", "Crucifixo", "Supino Inclinado", "Polia Alta", "Elevação Lateral", "Triceps Frances", "Triceps Barra"],
+        "treinoB": ["Supino Inclinado", "Crucifixo", "Supino Reto", "Polia Alta", "Elevação Lateral", "Triceps Frances", "Triceps Barra"],
         "treinoC": ["Panturrilha (Hack)", "Banco Selio","Extensora", "LegPress", "Adutora", "Agachamento (Hack)", "Cadeira Flexora", "Stiff (Barra)"],
         "treinoD": ["Supino Inclinado", "Crucifixo", "Desenvolvimento", "Triceps Frances", "Triceps V", "Rosca W", "Rosca Bayesian", "Extensora", "Leg Press", "Cadeira Flexora"],
         "treinoE": []

@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CarterFit</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <input placeholder="Nome" type="text" id="login">
-    <input placeholder="Senha" type="password" id="senha">
+   
 
-    <button onclick=login()>Entrar</button>
+    <div id="login">
+        <h1 id="logo">CarterFit</h1>
+        <h3>Conecte-se</h3>
+        <p>Seja bem-vindo a CarterFit! Insira seu nome e sua senha dada pelo personal para acessar sua ficha!</p>
+
+        <input placeholder="Nome" type="text" id="name">
+        <input placeholder="Senha" type="password" id="senha"> <br>
+
+        <button onclick=login()>Entrar</button>
+    </div>
 
     <script>
         function login() {
-            const name = document.getElementById("login")
+            const name = document.getElementById("name")
             const senha = document.getElementById("senha")
 
             fetch("data.json")

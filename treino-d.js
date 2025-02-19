@@ -32,5 +32,24 @@ function treino_d() {
     }
 
     fichas.d.style.display = "block"
+
+    treinoa.style.backgroundColor = "rgb(29, 29, 29)"
+    treinob.style.backgroundColor = "rgb(29, 29, 29)"
+    treinoc.style.backgroundColor = "rgb(29, 29, 29)"
+    treinod.style.backgroundColor = "black"
+    treinoe.style.backgroundColor = "rgb(29, 29, 29)"
+
+    ficha.style.height = "1px"
+
+    clearInterval(intervalo)
+    intervalo = setTimeout(function() {
+        ficha.style.height = "350px"
+        usou = true
+
+        if (usou = true) {
+            clearInterval(intervalo)
+            usou = false
+        }
+    }, 400)
     
 }

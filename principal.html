@@ -16,20 +16,20 @@
     </div>
 
     <div id="navbar">
-        <button onclick=treinobar()>Treino</button>
-        <button onclick=sobrebar()>Sobre</button>
-        <button onclick=contatobar()>Contato</button>
+        <button id="treinobutton" onclick=treinobar()>Treino</button>
+        <button id="sobrebutton" onclick=sobrebar()>Sobre</button>
+        <button id="contatobutton" onclick=contatobar()>Contato</button>
 
     </div>
 
     <div id="treino" style="display: none;">
-        <button onclick=treino_a()>Treino A</button>
-        <button onclick=treino_b()>Treino B</button>
-        <button onclick=treino_c()>Treino C</button>
-        <button onclick=treino_d()>Treino D</button>
-        <button onclick=treino_e()>Treino E</button>
+        <button id="treinoa" onclick=treino_a()>Treino A</button>
+        <button id="treinob" onclick=treino_b()>Treino B</button>
+        <button id="treinoc" onclick=treino_c()>Treino C</button>
+        <button id="treinod" onclick=treino_d()>Treino D</button>
+        <button id="treinoe"onclick=treino_e()>Treino E</button>
 
-        <div id="ficha" style="height: 350px;">
+        <div id="ficha" style="height: 1px;">
             <div id="treino-a" style="display: none;">
                 <p id="diaA">Dia:</p>
             </div>
@@ -53,16 +53,16 @@
     </div>
 
     <div id="sobre" style="display: none;">
-        Este site tem o próposito de organizar seus treinos na semana da forma que o personal escolher. <br><br>
-        O valor cobrado pela ficha e o uso do site é de R$ 25,00 a cada 2 MESES (tempo de mudança dos treinos). <br><br>
-        Como funciona?: Entre em contato com o personal do site. Após isso, ele irá fazer perguntas do tipo: <br><br>
-        qual músculo é sua prioridade no momento? <br> Quantas vezes você quer entrar pela semana? <br> Seu tempo de treino? E etc. Assim seu treino <br><br>
-        será montado pelo personal com vários métodos de como você fará eles.
+        <p>Este site tem o próposito de organizar seus treinos na semana da forma que o personal escolher. <br><br>
+            O valor cobrado pela ficha e o uso do site é de R$ 25,00 a cada 2 MESES (tempo de mudança dos treinos). <br><br>
+            Como funciona?: Entre em contato com o personal do site. Após isso, ele irá fazer perguntas do tipo: <br><br>
+            qual músculo é sua prioridade no momento? <br> Quantas vezes você quer entrar pela semana? <br> Seu tempo de treino? E etc. Assim seu treino <br><br>
+            será montado pelo personal com vários métodos de como você fará eles.</p>
     </div>
 
     <div id="contato" style="display: none;">
-        Fico feliz que queira entrar em contato conosco! <br><br>
-        Aviso: Leia SOBRE nós antes de entrar em contato <br><br>
+        <p>Fico feliz que queira entrar em contato conosco! <br><br>
+            Aviso: Leia SOBRE nós antes de entrar em contato <br><br></p>
 
         <a href="https://discord.com/channels/@me/723494046793859113">DISCORD</a>
     </div>
@@ -71,12 +71,26 @@
         const divtreino = document.getElementById("treino")
         const divsobre = document.getElementById("sobre")
         const divcontato = document.getElementById("contato")
+
+        const treinobutton = document.getElementById("treinobutton")
+        const sobrebutton = document.getElementById("sobrebutton")
+        const contatobutton = document.getElementById("contatobutton")
+
         const user = localStorage.getItem("nome")
 
         const namebar = document.getElementById("namebar")
         namebar.textContent = user
 
         const ficha = document.getElementById("ficha")
+
+        const treinoa = document.getElementById("treinoa")
+        const treinob = document.getElementById("treinob")
+        const treinoc = document.getElementById("treinoc")
+        const treinod = document.getElementById("treinod")
+        const treinoe = document.getElementById("treinoe")
+
+        let intervalo = null
+        let usou = false
 
         const fichas = {
             "a": document.getElementById("treino-a"),
@@ -122,6 +136,23 @@
             divtreino.style.display = "block"
             divsobre.style.display = "none"
             divcontato.style.display = "none"
+            
+            sobrebutton.style.backgroundColor = "transparent"
+            treinobutton.style.backgroundColor = "black"
+            contatobutton.style.backgroundColor = "transparent"
+
+            ficha.style.left = "1px"
+
+            clearInterval(intervalo)
+            intervalo = setTimeout(function() {
+                ficha.style.left = "30px"
+                usou = true
+
+                if (usou = true) {
+                    clearInterval(intervalo)
+                    usou = false
+                }
+            }, 100)
 
         }
 
@@ -130,6 +161,24 @@
             divsobre.style.display = "block"
             divcontato.style.display = "none"
 
+            const sobrediv = document.getElementById("sobre")
+            
+            sobrebutton.style.backgroundColor = "black"
+            treinobutton.style.backgroundColor = "transparent"
+            contatobutton.style.backgroundColor = "transparent"
+
+            sobrediv.style.left = "1px"
+
+            clearInterval(intervalo)
+            intervalo = setTimeout(function() {
+                sobrediv.style.left = "30px"
+                usou = true
+
+                if (usou = true) {
+                    clearInterval(intervalo)
+                    usou = false
+                }
+            }, 100)
         }
 
         function contatobar(){
@@ -137,6 +186,24 @@
             divsobre.style.display = "none"
             divcontato.style.display = "block"
 
+            const contatodiv = document.getElementById("contato")
+
+            sobrebutton.style.backgroundColor = "transparent"
+            treinobutton.style.backgroundColor = "transparent"
+            contatobutton.style.backgroundColor = "black"
+
+            contatodiv.style.left = "1px"
+
+            clearInterval(intervalo)
+            intervalo = setTimeout(function() {
+                contatodiv.style.left = "30px"
+                usou = true
+
+                if (usou = true) {
+                    clearInterval(intervalo)
+                    usou = false
+                }
+            }, 100)
         }
 
         function save() {
