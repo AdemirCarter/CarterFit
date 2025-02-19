@@ -6,6 +6,11 @@
 
 @media screen and (max-width: 600px) {
 
+    #menu {
+        position: relative;
+        top: 100px;
+    }
+
     /*Usuario*/
     #Usuario {
         padding: 20px 10px;

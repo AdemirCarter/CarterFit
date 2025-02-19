@@ -90,6 +90,11 @@
             const repinput = document.querySelectorAll("input[class = 'rep']")
             const pesoinput = document.querySelectorAll("input[class = 'peso']")
 
+            const save_button = document.getElementById("save")
+            save_button.style.transform = "scale(1.2)"
+            save_button.style.backgroundColor = "blueviolet"
+            save_button.style.color = "white"
+
             repinput.forEach(rep => {
                 localStorage.setItem(rep.id, rep.value)
             });
@@ -99,8 +104,6 @@
             })
 
             setInterval(function(){
-                alert("Salvo com sucesso")
-
                 location.reload()
             }, 500)
         }

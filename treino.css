@@ -5,8 +5,15 @@
 }
 
 @media screen and (max-width: 600px) {
+
+    #menu {
+        position: relative;
+        top: 40px;
+    }
+
     h2 {
         text-align: center;
+        color: blueviolet;
     }
 
     /*Ficha*/
@@ -22,12 +29,11 @@
     }
 
     .ficha p {
-        background-color: rgb(209, 209, 209);
-        color: blueviolet;
+        background-color: blueviolet;
+        color: white;
         height: 80px;
         padding: 10px;
         border-radius: 20px;
-        border: 1px solid blueviolet;
     }
 
 
@@ -87,11 +93,4 @@
         top: 10px;
         transition: .2s;
     }
-
-    #save:hover {
-        background-color: blueviolet;
-        color: white;
-        transform: scale(1.2);
-    }
-
 }

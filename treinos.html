@@ -11,11 +11,11 @@
     <h1>Treinos</h1>
 
     <div id="treinos">
-        <button onclick=treino_a()>Treino A</button> <br>
-        <button onclick=treino_b()>Treino B</button> <br>
-        <button onclick=treino_c()>Treino C</button> <br>
-        <button onclick=treino_d()>Treino D</button> <br>
-        <button onclick=treino_e()>Treino E</button>
+        <button id="buttonA" onclick=treino_a()>Treino A</button> <br>
+        <button id="buttonB" onclick=treino_b()>Treino B</button> <br>
+        <button id="buttonC" onclick=treino_c()>Treino C</button> <br>
+        <button id="buttonD" onclick=treino_d()>Treino D</button> <br>
+        <button id="buttonE" onclick=treino_e()>Treino E</button>
     </div>
 
     <div id="menu">
@@ -27,23 +27,58 @@
 
     <script>
         function treino_a() {
-            window.location.href = "treino-a.html"
+            const buttonA = document.getElementById("buttonA")
+            buttonA.style.left = "30px"
+            buttonA.style.backgroundColor = "blueviolet"
+            buttonA.style.color = "white"
+
+            setInterval(function(){
+                window.location.href = "treino-a.html"
+            }, 500)
         }
 
         function treino_b() {
-            window.location.href = "treino-b.html"
+            const buttonA = document.getElementById("buttonB")
+            buttonA.style.left = "30px"
+            buttonA.style.backgroundColor = "blueviolet"
+            buttonA.style.color = "white"
+
+            setInterval(function(){
+                window.location.href = "treino-b.html"
+            }, 500)
         }
 
         function treino_c() {
-            window.location.href = "treino-c.html"
+            const buttonA = document.getElementById("buttonC")
+            buttonA.style.left = "30px"
+            buttonA.style.backgroundColor = "blueviolet"
+            buttonA.style.color = "white"
+
+            setInterval(function(){
+                window.location.href = "treino-c.html"
+            }, 500)
         }
 
         function treino_d() {
-            window.location.href = "treino-d.html"
+            const buttonA = document.getElementById("buttonD")
+            buttonA.style.left = "30px"
+            buttonA.style.backgroundColor = "blueviolet"
+            buttonA.style.color = "white"
+
+            setInterval(function(){
+                window.location.href = "treino-d.html"
+            }, 500)
         }
 
         function treino_e() {
-            window.location.href = "treino-e.html"
+            const buttonA = document.getElementById("buttonE")
+            buttonA.style.left = "30px"
+            buttonA.style.backgroundColor = "blueviolet"
+            buttonA.style.color = "white"
+
+            setInterval(function(){
+                window.location.href = "treino-e.html"
+            }, 500)
         }
 
         //Treino

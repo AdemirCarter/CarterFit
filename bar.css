@@ -10,8 +10,7 @@
     #menu button {
         margin-right: 20px;
         padding: 15px 15px;
-        position: fixed;
-        bottom: 20px;
+        position: relative;
         border: none;
         border-radius: 30px;
         
@@ -23,12 +22,12 @@
     }
 
     #menu #contato {
-        right: 1px;
+        left: 30px;
         transition: .3s;
     }
 
     #menu #treino {
-        left: 120px;
+        left: 30px;
         transition: .3s;
     }
 
